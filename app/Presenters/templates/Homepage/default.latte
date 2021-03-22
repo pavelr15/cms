@@ -1,0 +1,14 @@
+{* This is the welcome page, you can delete it *}
+
+{block content}
+<div>
+    {if $user->isLoggedIn()}
+        <p>
+        <h1>Welcome {$user->getIdentity()->username}</h1>
+        </p>
+    {else}
+        <p>
+        <h1>Welcome guest</h1>
+        </p>
+    {/if}
+</div>
